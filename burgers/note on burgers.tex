@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+\section{MC (Monotonized Central) Limiter}
+The MC limiter is a slope limiter used in finite-volume and finite-difference schemes to achieve second-order accuracy in smooth regions while avoiding spurious oscillations near discontinuities (shocks).
+
+The idea is to construct piecewise linear profiles inside each cell but limit their slopes to maintain monotonicity.
+
+The formula here we use: For cell values $a_{i-1}$, $a_i$, $a_{i+1}$, we define
+\begin{equation}
+\Delta^- = a_i - a_{i-1}, \quad
+\Delta^+ = a_{i+1} - a_i, \quad
+\Delta^c = \frac{1}{2}(a_{i+1} - a_{i-1}).
+\end{equation}
+
+Then the limited slope is
+\begin{equation}
+\sigma_i =
+\begin{cases}
+\text{sign}(\Delta^c) \, \min\!\Big( |\Delta^c|, 2|\Delta^-|, 2|\Delta^+| \Big), &\quad \Delta^- \Delta^+ > 0, \\
+0, &\quad \text{otherwise}.
+\end{cases}	
+\end{equation}
+
+Properties:
+\begin{itemize}
+	\item Second-order accurate in smooth regions.
+	\item Non-oscillatory near discontinuities.
+	\item Less diffusive than minmod, more robust than unlimited central difference.
+	\item Usage: Common in MUSCL--Hancock and Godunov-type schemes for hyperbolic conservation laws.
+\end{itemize}
+
+\section{Predictor Step and Interface Reconstruction}
+The ``slope'' we compute is the limited cell-edge jump per $\Delta x$, i.e.
+\begin{equation}
+	\left(\frac{\partial a}{\partial x}\right)_i \, \Delta x.
+\end{equation}
+This slope enters directly into the upwinded linear reconstructions at the cell interfaces. To achieve second-order accuracy in both space and time, the MUSCL--Hancock scheme evolves the piecewise linear states forward by half a timestep. 
+
+For Burgers' equation, where the characteristic speed is $a = u_i$, the interface states become
+\begin{equation}
+u_{i+1/2}^- = u_i - \tfrac{1}{2}\!\left(1 + \frac{u_i \,\Delta t}{\Delta x}\right)\sigma_i,
+\end{equation}
+\begin{equation}
+u_{i-1/2}^+ = u_i + \tfrac{1}{2}\!\left(1 - \frac{u_i \,\Delta t}{\Delta x}\right)\sigma_i.
+\end{equation}
+
+Here, the factors $\left(1 \pm \tfrac{u_i \Delta t}{\Delta x}\right)$ arise from the characteristic evolution over $\Delta t/2$. Without these correction terms, the method would be only second-order in space but first-order in time. Thus, the MUSCL--Hancock predictor step ensures overall second-order accuracy while preserving stability near discontinuities.
+
+
+\end{document}

@@ -1,0 +1,396 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  21 AUG 2025 11:29
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"note on burgers.tex"
+(./note on burgers.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count192
+\c@section=\count193
+\c@subsection=\count194
+\c@subsubsection=\count195
+\c@paragraph=\count196
+\c@subparagraph=\count197
+\c@figure=\count198
+\c@table=\count199
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count266
+\l__pdf_internal_box=\box52
+\g__pdf_backend_annotation_int=\count267
+\g__pdf_backend_link_int=\count268
+) (/Users/xiaoquer/Desktop/julia code CAH/burgers/.texpadtmp/note on burgers.aux)
+\openout1 = `"note on burgers.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+./note on burgers.tex:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7 ...ormula here we use:^^I For cell values \$a_
+                                                  \{i-1\}\$, \$a_i\$, \$a_\{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 7.
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 7.
+
+./note on burgers.tex:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8 \end{document}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no – ("2013) in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Overfull \hbox (107.22527pt too wide) in paragraph at lines 7--8
+\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 text\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 sign\OMS/cmsy/m/n/10 g\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Delta[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 min\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 !\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Big\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 jn\OML/cmm/m/it/10 Delta[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 jn\OML/cmm/m/it/10 Delta[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 jn\OML/cmm/m/it/10 Delta[]\OMS/cmsy/m/n/10 jn\OML/cmm/m/it/10 Big\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 &\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 quad\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Delta[]\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Delta[] >
+ []
+
+
+Overfull \hbox (7.8577pt too wide) in paragraph at lines 7--8
+\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 itemLessdiffusivethanminmod; morerobustthanunlimitedcentraldifference:[] 
+ []
+
+
+Overfull \hbox (108.94327pt too wide) in paragraph at lines 7--8
+\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 itemUsage \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 CommoninMUSCLHancockandGodunov \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 typeschemesforhyperbolicconservationlaws:[] 
+ []
+
+
+Overfull \hbox (115.8864pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 The\OT1/cmr/m/n/10 \\OML/cmm/m/it/10 slope[]wecomputeisthelimitedcell \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 edgejumpper\OT1/cmr/m/n/10 $\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Deltax\OT1/cmr/m/n/10 $\OML/cmm/m/it/10 ; i:e:\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 $(\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 partiala=\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 partialx\OT1/cmr/m/n/10 )[]\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Deltax\OT1/cmr/m/n/10 $\OML/cmm/m/it/10 :[] 
+ []
+
+
+Overfull \hbox (22.23956pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 Thisslopeentersdirectlyintotheupwindedlinearreconstructionsatthecellinterfaces:[] 
+ []
+
+
+Overfull \hbox (294.20789pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 Toachievesecond \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 orderaccuracyinbothspaceandtime; theMUSCL \OMS/cmsy/m/n/10 ^^@ ^^@\OML/cmm/m/it/10 Hancockschemeevolvesthepiecewiselinearstatesforwardbyhalfatimestep:[] 
+ []
+
+
+Overfull \hbox (48.9954pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 ForBurgers[]equation; wherethecharacteristicspeedis\OT1/cmr/m/n/10 $\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 $\OML/cmm/m/it/10 ; theinterfacestatesbecome[] 
+ []
+
+
+Overfull \hbox (44.81758pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 u[]i \OT1/cmr/m/n/10 + 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 g[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u[] \OMS/cmsy/m/n/10 ^^@ n\OML/cmm/m/it/10 tfrac\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 gf\OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 gn\OT1/cmr/m/n/10 !\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 left\OT1/cmr/m/n/10 (1 + \OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 frac\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 u[]\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Deltat\OMS/cmsy/m/n/10 gfn\OML/cmm/m/it/10 Deltax\OMS/cmsy/m/n/10 gn\OML/cmm/m/it/10 right\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 sigma[]; [] 
+ []
+
+
+Overfull \hbox (43.03986pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 u[]i \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 g[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 + \OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 tfrac\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 gf\OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 gn\OT1/cmr/m/n/10 !\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 left\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ n\OML/cmm/m/it/10 frac\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 u[]\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Deltat\OMS/cmsy/m/n/10 gfn\OML/cmm/m/it/10 Deltax\OMS/cmsy/m/n/10 gn\OML/cmm/m/it/10 right\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 sigma[]:[] 
+ []
+
+
+Overfull \hbox (191.24667pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 Here; thefactors\OT1/cmr/m/n/10 $\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 left\OT1/cmr/m/n/10 (1\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 pm\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 tfrac\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 u[]\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Deltat\OMS/cmsy/m/n/10 gfn\OML/cmm/m/it/10 Deltax\OMS/cmsy/m/n/10 gn\OML/cmm/m/it/10 right\OT1/cmr/m/n/10 )$\OML/cmm/m/it/10 arisefromthecharacteristicevolutionover\OT1/cmr/m/n/10 $\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 Deltat=\OT1/cmr/m/n/10 2$\OML/cmm/m/it/10 :[] 
+ []
+
+
+Overfull \hbox (33.47124pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 Withoutthesecorrectionterms; themethodwouldbeonlysecond \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 orderinspacebutfirst \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (218.4545pt too wide) in paragraph at lines 7--8
+\OML/cmm/m/it/10 Thus; theMUSCL \OMS/cmsy/m/n/10 ^^@ ^^@\OML/cmm/m/it/10 Hancockpredictorstepensuresoverallsecond \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 orderaccuracywhilepreservingstabilityneardiscontinuities:[] 
+ []
+
+
+
+[1
+
+]
+
+[2] (/Users/xiaoquer/Desktop/julia code CAH/burgers/.texpadtmp/note on burgers.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 475 strings out of 473832
+ 9867 string characters out of 5729481
+ 399384 words of memory out of 5000000
+ 23618 multiletter control sequences out of 15000+600000
+ 558845 words of font info for 37 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 35i,5n,50p,3635b,109s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on /Users/xiaoquer/Desktop/julia code CAH/burgers/.texpadtmp/note on burgers.pdf (2 pages).
