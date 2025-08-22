@@ -1,7 +1,10 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage[a4paper, margin=2cm]{geometry}
 
+\title{Burger's Equation}
 \begin{document}
+\maketitle
 \section{MC (Monotonized Central) Limiter}
 The MC limiter is a slope limiter used in finite-volume and finite-difference schemes to achieve second-order accuracy in smooth regions while avoiding spurious oscillations near discontinuities (shocks).
 
@@ -47,6 +50,165 @@ u_{i-1/2}^+ = u_i + \tfrac{1}{2}\!\left(1 - \frac{u_i \,\Delta t}{\Delta x}\righ
 \end{equation}
 
 Here, the factors $\left(1 \pm \tfrac{u_i \Delta t}{\Delta x}\right)$ arise from the characteristic evolution over $\Delta t/2$. Without these correction terms, the method would be only second-order in space but first-order in time. Thus, the MUSCL--Hancock predictor step ensures overall second-order accuracy while preserving stability near discontinuities.
+
+\section{Weighted Essentially Non-Oscillatory (WENO) Reconstruction}
+
+The WENO (Weighted Essentially Non-Oscillatory) method is a high-order accurate spatial reconstruction scheme designed for solving hyperbolic conservation laws, especially those involving shocks or sharp gradients. It achieves high-order accuracy in smooth regions and avoids spurious oscillations near discontinuities by adaptively weighting multiple stencils.
+
+Let $q_i$ be the cell-averaged quantity. To compute the left-biased value $q_{i+1/2}^-$ at the interface $x_{i+1/2}$, WENO uses $r$ overlapping stencils of $r$ points each:
+\[
+S_k = \{ q_{i - r + k}, \dots, q_{i + k - 1} \}, \quad k = 1, \dots, r.
+\]
+Each stencil $S_k$ yields a candidate polynomial approximation evaluated at the interface $x_{i+1/2}$:
+\[
+q^{(k)}_{i+1/2} = \sum_{\ell=1}^r a_{k\ell} q_{i + k - \ell},
+\]
+where the coefficients $a_{k\ell}$ are precomputed for each stencil and ensure that each $q^{(k)}_{i+1/2}$ is a $(r-1)$-degree polynomial reconstruction with order $r$ accuracy over stencil $S_k$.
+
+These polynomials form the building blocks for the final nonlinear reconstruction:
+\[
+q_{i+1/2}^- = \sum_{k=1}^r \omega_k q^{(k)}_{i+1/2}.
+\] 
+The final WENO reconstruction is a convex combination:
+\[
+q_{i+1/2}^- = \sum_{k=1}^r \omega_k q^{(k)}_{i+1/2},
+\]
+where $\omega_k$ are nonlinear weights that favor smooth stencils and reduce to linear weights $C_k$ in smooth regions.
+
+\section*{Smoothness Indicators and Weights}
+
+The smoothness indicators $\beta_k$ measure the smoothness of $q$ over stencil $S_k$, typically using:
+\[
+\beta_k = \sum_{l=1}^r \sum_{m=1}^l \sigma_{k\ell m} q_{i+k-\ell} q_{i+k-m},
+\]
+with precomputed constants $\sigma_{klm}$.
+
+Then, the nonlinear weights are:
+\[
+\alpha_k = \frac{C_k}{\varepsilon + \beta_k^2}, \quad
+\omega_k = \frac{\alpha_k}{\sum_j \alpha_j},
+\]
+where $\varepsilon \ll 1$ prevents division by zero and $C_k$ are the optimal linear weights for the desired order of accuracy.
+
+\section*{Examples of WENO Coefficients}
+
+Below we list the coefficients used in the WENO reconstruction for two representative orders.
+
+\paragraph{Example 1: \( r = 2 \)} 
+This uses 3-point stencils (2 on each side of an interface):
+
+\[
+C^{(2)} = \left[ \frac{1}{3},\ \frac{2}{3} \right],
+\]
+\[
+a^{(2)} = \frac{1}{2}
+\begin{bmatrix}
+3 & -1 \\
+1 & 1
+\end{bmatrix},
+\]
+\[
+\sigma^{(2)} = 
+\left\{
+\begin{array}{ll}
+\sigma_1 =
+\begin{bmatrix}
+1 & 0 \\
+0 & 0
+\end{bmatrix},
+& 
+\sigma_2 =
+\begin{bmatrix}
+1 & 0 \\
+-4 & 4
+\end{bmatrix}
+\end{array}
+\right.
+\]
+
+\paragraph{Example 2: \( r = 3 \)} 
+This uses 5-point stencils:
+
+\[
+C^{(3)} = \left[ \frac{1}{10},\ \frac{6}{10},\ \frac{3}{10} \right],
+\]
+\[
+a^{(3)} = \frac{1}{6}
+\begin{bmatrix}
+2 & -7 & 11 \\
+-1 & 5 & 2 \\
+2 & 5 & -1
+\end{bmatrix},
+\]
+\[
+\sigma^{(3)} = 
+\left\{
+\begin{array}{ll}
+\sigma_1 =
+\begin{bmatrix}
+1 & 0 & 0 \\
+-4 & 4 & 0 \\
+3 & -6 & 3
+\end{bmatrix}, &
+
+\sigma_2 =
+\begin{bmatrix}
+1 & 0 & 0 \\
+-4 & 4 & 0 \\
+3 & -6 & 3
+\end{bmatrix}, \\[1em]
+
+\sigma_3 =
+\begin{bmatrix}
+1 & 0 & 0 \\
+-4 & 4 & 0 \\
+3 & -6 & 3
+\end{bmatrix}
+\end{array}
+\right.
+\]
+
+The smoothness indicators \( \beta_k \) are computed via:
+\[
+\beta_k = \sum_{\ell=1}^r \sum_{m=1}^\ell \sigma_{k\ell m} q_{i+k-\ell} q_{i+k-m},
+\]
+using the above \( \sigma \) coefficients.
+
+
+
+\section*{WENO-M Mapping (Optional)}
+
+The mapped WENO (WENO-M) improves resolution near critical points by remapping the nonlinear weights $\omega_k$ through a transformation:
+\[
+\alpha_k^{\text{map}} = \frac{\omega_k (C_k + C_k^2 - 3 C_k \omega_k + \omega_k^2)}{C_k^2 + \omega_k(1 - 2 C_k)},
+\]
+and normalizing again to obtain final weights.
+
+\section*{Time Integration and Flux Splitting}
+
+To apply WENO to nonlinear problems (e.g. Burgers' equation), a flux splitting is used:
+\[
+f^\pm(u) = \frac{1}{2} (f(u) \pm \alpha u),
+\]
+with $\alpha = \max |f'(u)|$ for global Lax-Friedrichs splitting.
+
+Each $f^\pm$ is reconstructed with left- or right-biased WENO. The resulting interface flux is:
+\[
+f_{i+1/2} = f^+_{i+1/2} + f^-_{i+1/2}.
+\]
+
+The spatial derivative $\partial_x f$ is then approximated by a finite difference of the numerical flux, and advanced in time using high-order Runge-Kutta (e.g. RK4).
+
+\section*{Convergence}
+
+The WENO-$r$ scheme formally achieves $(2r-1)$th order accuracy in smooth regions. For example:
+\begin{itemize}
+    \item $r=3$ yields 5th-order accuracy,
+    \item $r=4$ yields 7th-order accuracy,
+    \item $r=5$ yields 9th-order accuracy.
+\end{itemize}
+
+This is confirmed by convergence tests against smooth solutions, such as Gaussian profiles evolved by the method of characteristics.
 
 
 \end{document}

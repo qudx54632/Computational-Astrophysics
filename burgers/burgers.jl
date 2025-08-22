@@ -62,20 +62,20 @@ end
 
 Simulation(g::Grid1D) = Simulation(g, 0.0)
 
-function init_cond!(s::Simulation, type::Symbol=:tophat)
+function init_cond!(s::Simulation, type::String)
     g = s.grid
     fill!(g.u, 0.0)
 
-    if type === :tophat
+    if type === "tophat"
         idx = (@. (g.x >= 0.333) & (g.x <= 0.666))
         g.u[idx] .= 1.0
 
-    elseif type === :sine
+    elseif type === "sine"
         g.u .= 1.0
         idx = (@. (g.x >= 0.333) & (g.x <= 0.666))
         g.u[idx] .+= @. 0.5 * sin(2.0*pi*(g.x[idx]-0.333)/0.333)
 
-    elseif type === :rarefaction
+    elseif type === "rarefaction"
         g.u .= 1.0
         g.u[g.x .> 0.5] .= 2.0
 
@@ -91,16 +91,6 @@ timestep(s::Simulation, C::Float64) = begin
     umax = maximum(abs.(@view g.u[g.ilo:g.ihi]))
     C * g.dx / umax
 end
-
-
-xmin, xmax = 0.0, 1.0
-nx, ng     = 256, 2
-tmax       = (xmax - xmin) / 1.0
-C          = 0.8
-
-g  = Grid1D(nx, ng; xmin=xmin, xmax=xmax, bc=:periodic)
-s  = Simulation(g)
-init_cond!(s, :rarefaction)
 
 function states(g::Grid1D, dt::Float64)
     # MC-limited piecewise-linear reconstruction (van Leer 1977; LeVeque 2002)
@@ -175,20 +165,21 @@ function evolve!(s::Simulation, C::Float64, tmax::Float64)
     return nothing
 end
 
+# ------------- rarefaction -------------
+
 xmin, xmax = 0.0, 1.0
 nx, ng     = 256, 2
 tmax       = (xmax - xmin) / 1.0
 C          = 0.8
 
-# ------------- rarefaction -------------
 g  = Grid1D(nx, ng; xmin=xmin, xmax=xmax, bc=:outflow)
 s  = Simulation(g)
 plt = plot()
-init_cond!(s, :rarefaction)
+init_cond!(s, "rarefaction")
 uinit = copy(s.grid.u)
 
 for i in 0:9
-    tend = (i + 1) * 0.02 * tmax
+    local tend = (i + 1) * 0.02 * tmax
     s.grid.u .= uinit
     s.t = 0.0
 
@@ -207,12 +198,12 @@ g2 = Grid1D(nx, ng; xmin=xmin, xmax=xmax, bc=:periodic)
 s2 = Simulation(g2)
 
 plt = plot()
-init_cond!(s2, :sine)
+init_cond!(s2, "sine")
 uinit = copy(s2.grid.u)
 
 plt = plot()
 for i in 0:9
-    tend = (i + 1) * 0.02 * tmax
+    local tend = (i + 1) * 0.02 * tmax
     s.grid.u .= uinit
     s.t = 0.0
 
